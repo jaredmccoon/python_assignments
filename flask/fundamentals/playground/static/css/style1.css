@@ -1,0 +1,17 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    overflow: hidden;
+    margin-bottom: 2em;
+}
+
+.container div {
+    height: 300px;
+    width: 300px;
+    border-radius: 3%;
+}
