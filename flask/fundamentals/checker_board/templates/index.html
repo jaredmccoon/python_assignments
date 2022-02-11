@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css')}}">
+    <style>
+        #color1 {
+            background-color: {{ color1 }};
+        }
+        #color2 {
+            background-color: {{ color2 }};
+        }
+    </style>
+</head>
+<body>
+    <table>
+        {% for x in range(0,num1) %}
+        <tr>
+            {% for i in range(0,num2) %}
+            <td id="color1"></td>
+            <td id="color2"></td>
+            {% endfor %}
+        </tr>
+        <tr>
+            {% for i in range(0,num2) %}
+            <td id="color2"></td>
+            <td id="color1"></td>
+            {% endfor %}
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
