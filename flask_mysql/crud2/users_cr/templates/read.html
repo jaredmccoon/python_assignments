@@ -17,20 +17,26 @@
                     <th scope="col">Fullname</th>
                     <th scope="col">Email</th>
                     <th scope="col">Created at</th>
+                    <th scope="col">Actions</th>
                 </tr>
             </thead>
             <tbody>
                 {% for user in users %}
                     <tr>
-                        <td>{{ user.first_name}}</td>
-                        <td>{{ user.last_name}}</td>
-                        <td>{{ user.email}}</td>
-                        <td>{{ user.created_at}}</td>
+                        <td>{{ user.first_name }}</td>
+                        <td>{{ user.last_name }}</td>
+                        <td>{{ user.email }}</td>
+                        <td>{{ user.created_at }}</td>
+                        <td>
+                            <a href="/users/{{ user.id }}">show</a>|
+                            <a href="/users/{{ user.id }}/edit">edit</a>|
+                            <a href="/users/delete/{{ user.id }}">delete</a>
+                        </td>
                     </tr>
                 {% endfor %}
             </tbody>
         </table>
-        <a href="/user/new" class="btn btn-primary">Add a User</a>
+        <a href="/users/new" class="btn btn-primary">Add a User</a>
     </div>
 </body>
 </html>
