@@ -1,0 +1,12 @@
+.container {
+    margin: auto;
+    border-style: solid;
+    border-color: black;
+    border-radius: 3%;
+}
+
+#li {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+}
